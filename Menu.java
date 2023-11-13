@@ -25,14 +25,15 @@ public class Menu {
             case 1:
                 Add.put(dictionary);
                 break;
-            case 3:
-                Delete.remove(dictionary);
-                break;
             case 2:
                 Find.find(dictionary);
                 break;
+            case 3:
+                Delete.remove(dictionary);
+                break;
             case 4:
                 Read.read(dictionary);
+                break;
         }
     }
 }

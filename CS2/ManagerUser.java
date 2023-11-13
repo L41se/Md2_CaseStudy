@@ -8,7 +8,6 @@ public class ManagerUser {
     static Scanner scanner = new Scanner(System.in);
     static User name;
     public static void Menu(){
-        while(true){
             System.out.println("1: Log in to your Account");
             System.out.println("2: Sign up for an Account");
             System.out.println("3: Exit");
@@ -30,11 +29,11 @@ public class ManagerUser {
                     System.exit(0);
             }
         }
-    }
-    private static void login(){
-        System.out.println("Enter userName");
+
+    static boolean login(){
+        System.out.println("Enter Your username");
         String userName = scanner.nextLine();
-        System.out.println("Enter passWord");
+        System.out.println("Enter Your password");
         String passWord = scanner.nextLine();
 
         for (User menuUser: list) {
@@ -45,6 +44,7 @@ public class ManagerUser {
             }
         }
         System.out.println("Incorrect account or password information");
+        return true;
     }
 
     private static void signUp(){
@@ -61,7 +61,6 @@ public class ManagerUser {
         }
         System.out.println("Account successfully created");
         list.add(new User(name, pass));
-
         login();
     }
 }

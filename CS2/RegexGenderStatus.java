@@ -4,11 +4,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class RegexGenderStatus {
-
-
-
-    private static final String Gender="^[Mm][Aa][Ll]+|[Ff][Ee][Mm][Ae][Ll][Ee]$";
-    private static final String Status="^[Tt][Rr][Uu][Ee]+|[Ff][Aa][Ll][Ss][Ee]$";
+    private static final String Gender="^(male|female|Male|Female|Other)$";
+    private static final String Status="^(true|false|True|False)$";
 
     public RegexGenderStatus() {
     }
@@ -22,5 +19,4 @@ public class RegexGenderStatus {
         Matcher matcher=pattern.matcher(regex1);
         return matcher.matches();
     }
-
 }

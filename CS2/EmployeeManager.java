@@ -4,14 +4,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class EmployeeManager {
-    Scanner scanner = new Scanner(System.in);
-    ArrayList<Employee> employees = new ArrayList<>();
-    int count = 0;
-
-    public Employee create(String type){
+    static Scanner scanner = new Scanner(System.in);
+    static ArrayList<Employee> employees = new ArrayList<>();
+    public static Employee create(String type){
         String Name;
         while (true){
-            System.out.println("Enter name Employee: ");
+            System.out.println("Okay boss, enter name Employee: ");
             Name = scanner.nextLine();
             if (Name != ""){
                 break;
@@ -64,7 +62,7 @@ public class EmployeeManager {
             }
         }
         if (type.equals(" Employee Part - time")){
-            System.out.println(" Enter timework of employee Part-time");
+            System.out.println(" Enter work time of employee in Part-time segment");
             double workTime = Double.parseDouble(scanner.nextLine());
             double totalSalary = Double.parseDouble(scanner.nextLine());
             return new Part_time(Name,Status,Age,Gender,Salary,workTime,totalSalary);
@@ -74,7 +72,7 @@ public class EmployeeManager {
         
     }
 
-    public void delete(){
+    public static void delete(){
         System.out.println("Enter name employee u want to delete: ");
         String name = scanner.nextLine();
         for (int i = 0; i < employees.size(); i++){
@@ -90,7 +88,7 @@ public class EmployeeManager {
         }
     }
 
-    public void update(String name){
+    public static void update(String name){
         for (int i = 0; i < employees.size(); i++){
             if (employees.get(i).getName().equals(name)){
                 System.out.println(employees.get(i).toString() + "---" + "are in location");
@@ -107,14 +105,14 @@ public class EmployeeManager {
         employees.set(index,employee);
     }
 
-    public void show(){
+    public static void show(){
         for (Employee show1: employees){
             System.out.println(show1);
             System.out.println("<---->");
         }
     }
 
-    public void Status(){
+    public static void Status(){
         System.out.println("Enter employee want to check status");
         String name = scanner.nextLine();
         for (Employee b00lean : employees){
@@ -124,7 +122,7 @@ public class EmployeeManager {
         }
     }
 
-    public void Search(){
+    public static void Search(){
         System.out.println("Enter name employee want to search");
         String Name = scanner.nextLine();
         for (Employee employee : employees){

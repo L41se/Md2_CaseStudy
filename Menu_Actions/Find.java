@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 public class Find {
     public static void find(HashMap<String, String> map) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Nhap tu can tim kiem : ");
+        System.out.println("Input the word you wanna find: ");
         String find = sc.nextLine();
 
         Set<String> keys = map.keySet();
