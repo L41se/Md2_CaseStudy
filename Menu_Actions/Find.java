@@ -11,10 +11,10 @@ public class Find {
         String find = sc.nextLine();
 
         Set<String> keys = map.keySet();
-        List<String> listOfKeys = new ArrayList<String>(keys);
+        List<String> listOfKeys = new ArrayList<>(keys);
 
         Collection<String> values = map.values();
-        List<String> listOfValues = new ArrayList<String>(values);
+        List<String> listOfValues = new ArrayList<>(values);
 
         String regex = ".*" + find + ".*";
         Pattern pattern = Pattern.compile(regex);
