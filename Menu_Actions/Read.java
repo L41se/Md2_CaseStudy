@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.HashMap;
 
 public class Read {
-    public static void read(HashMap<String, String> dictionary) throws IOException {
+    public static void read(HashMap<String, String> map) throws IOException {
         try {
             File f = new File("Stuff.txt");
             FileReader fr = new FileReader(f);

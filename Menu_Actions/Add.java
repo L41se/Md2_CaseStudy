@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class Add {
-    public static void put(HashMap<String,String> map) throws IOException{
+    public static void put(HashMap<String,String> map){
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Input Key: ");

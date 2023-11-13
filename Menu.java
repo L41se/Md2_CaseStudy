@@ -21,19 +21,21 @@ public class Menu {
         System.out.println("╰------------------------------------╯");
         System.out.println("Input your choice: ");
         int choice = sc.nextInt();
-        switch (choice) {
-            case 1:
-                Add.put(dictionary);
-                break;
-            case 2:
-                Find.find(dictionary);
-                break;
-            case 3:
-                Delete.remove(dictionary);
-                break;
-            case 4:
-                Read.read(dictionary);
-                break;
-        }
+        do {
+            switch (choice) {
+                case 1:
+                    Add.put(dictionary);
+                    break;
+                case 2:
+                    Find.find(dictionary);
+                    break;
+                case 3:
+                    Delete.remove(dictionary);
+                    break;
+                case 4:
+                    Read.read(dictionary);
+                    break;
+            }
+        } while (choice != 0);
     }
 }

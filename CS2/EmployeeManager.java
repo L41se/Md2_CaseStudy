@@ -42,7 +42,7 @@ public class EmployeeManager {
         String Status;
         while (true){
             try{
-                System.out.println("Enter employee status: true/false");
+                System.out.println("Enter employee status: true/false");//còn làm tại cty hoặc mới nghỉ
                 Status = scanner.nextLine();
                 if (RegexGenderStatus.validateStatus(Status)){
                     break;
@@ -69,7 +69,6 @@ public class EmployeeManager {
         } else {
             return new Full_time(Name,Status,Age,Gender,Salary);
         }
-        
     }
 
     public static void delete(){

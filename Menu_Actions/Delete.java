@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class Delete {
-    public static void remove(HashMap<String,String> map) throws IOException {
+    public static void remove(HashMap<String,String> map){
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhap tu can xoa : ");
         String key = sc.nextLine();

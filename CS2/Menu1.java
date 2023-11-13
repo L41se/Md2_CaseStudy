@@ -2,7 +2,6 @@ package CS2;
 
 import java.util.Scanner;
 
-import static CS2.ManagerUser.login;
 
 public class Menu1 {
     public static void main(String[] args) {
@@ -42,7 +41,6 @@ public class Menu1 {
                         System.exit(0);
                 }
             } while (true);
-
         }
     }
 
